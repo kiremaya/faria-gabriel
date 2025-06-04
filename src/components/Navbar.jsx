@@ -5,15 +5,15 @@ function Navbar() {
   return (
     <nav className="navbar">
       <ul className="navbar-list">
-        <Link to={"/nosotros"} className="navbar-item">
-          Nosotros
+        <Link to={"/"} className="navbar-item">
+          Inicio
         </Link>
         <Link to={"/productos"} className="navbar-item">
           Productos
         </Link>
-        {/* TODO: Navigate to contact */}
-        <Link to={"/"} className="navbar-item">
-          Contacto
+       
+        <Link to={"/Nosotros"} className="navbar-item">
+          Nosotros
         </Link>
       </ul>
     </nav>
