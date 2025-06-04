@@ -6,9 +6,9 @@ import "./App.css";
 import Productos from "./components/itemlistcontainer/Productos";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
-import Producto from "./components/itemlistcontainer/Producto";
 import Error from "./components/Error";
 import Nosotros from "./components/Nosotros";
+import Detalles from "./components/itemlistcontainer/Detalles";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
             <Route index element={<Main />} />
             <Route path="productos" element={<Productos />} />
             <Route path="nosotros" element={<Nosotros />} />
-            <Route path="productos/:id" element={<Producto />} />
+            <Route path="productos/:id" element={<Detalles />} />
             <Route path="/" element={<Error />} />
           </Route>
         </Routes>

@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import Itemlist from "../itemlistcontainer/Itemlist.jsx";
 import "../itemlistcontainer/itemlist.css";
 import { productos } from "../../data/productos.js";
+import ItemList from "./Itemlist.jsx";
+
 function Productos() {
   const [items, setItems] = useState([]);
 
@@ -17,11 +18,7 @@ function Productos() {
     });
   }, []);
 
-  return (
-    <div className="cards-container">
-      <Itemlist items={items} />
-    </div>
-  );
+  return <ItemList items={items} />;
 }
 
 export default Productos;

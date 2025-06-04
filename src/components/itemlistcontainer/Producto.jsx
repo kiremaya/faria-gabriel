@@ -1,11 +1,14 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
-function Producto() {
+
+function Producto({ id, nombre, precio, descripcion }) {
   return (
-    <div>
-      <h2>Detalle del producto</h2>
-      <p>Aquí irá la información del producto seleccionado.</p>
-    </div>
+    <Link to={`/productos/${id}`} >
+      <div className="card">
+        <div className="card-title">{nombre}</div>
+        <div className="card-price">${precio}</div>
+      </div>
+    </Link>
   );
 }
 

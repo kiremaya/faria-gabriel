@@ -4,7 +4,7 @@ function Nosotros() {
   return (
     <div>
       <h2>Nosotros</h2>
-      <p>Bienvenido a la página de Nosotros.</p>
+      <p>Bienvenido a nuestra pagina.</p>
     </div>
   );
 }
