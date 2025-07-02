@@ -17,7 +17,7 @@ const db = getFirestore(app);
 async function uploadAll() {
   const productosRef = collection(db, "productos");
   for (const producto of productos) {
-    // Usar el campo id como ID del documento (debe ser string)
+    
     await setDoc(doc(productosRef, String(producto.id)), producto);
     console.log(`Subido: ${producto.nombre} (id: ${producto.id})`);
   }

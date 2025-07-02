@@ -7,9 +7,9 @@
   padding: 1rem 2rem;
   color: #ffffff;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  z-index: 1000; /* Para que esté por encima de todo */
+  z-index: 1000; 
 }
-/* Lista sin viñetas, horizontal */
+
 .navbar-list {
   list-style: none;
   display: flex;
@@ -18,13 +18,11 @@
   padding: 0;
 }
 
-/* Estilo de cada ítem */
 .navbar-item {
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
-/* Efecto hover */
 .navbar-item:hover {
   color: #00bcd4;
 }
