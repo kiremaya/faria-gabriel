@@ -9,10 +9,17 @@ import Layout from "./components/Layout";
 import Producto from "./components/itemlistcontainer/Producto";
 import Error from "./components/Error";
 import Nosotros from "./components/Nosotros";
+import { CartProvider } from "./context/CartContext";
+import { useState,useEffect } from "react";
+import {getfirestore,doc,getDoc} from "firebase/firestore";
+
 
 function App() {
+  const [productos, setProductos] = useState({});
+  const db = getfirestore(); 
+    
   return (
-    <>
+    <CartProvider>
       <BrowserRouter>
         <Navbar />
         <Routes>
@@ -26,7 +33,7 @@ function App() {
         </Routes>
         <Footer />
       </BrowserRouter>
-    </>
+    </CartProvider>
   );
 }
 

@@ -28,3 +28,76 @@
 .navbar-item:hover {
   color: #00bcd4;
 }
+
+.cart-widget {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.cart-count {
+  background: #00bcd4;
+  color: #fff;
+  border-radius: 50%;
+  padding: 0.2rem 0.6rem;
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.cart-dropdown {
+  position: absolute;
+  top: 3.5rem;
+  right: 0.5rem;
+  background: #222;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  padding: 1rem;
+  min-width: 220px;
+  z-index: 2000;
+}
+.cart-dropdown h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+.cart-dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.5rem 0;
+}
+.cart-dropdown li {
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+}
+.close-cart {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.1rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.7rem;
+  cursor: pointer;
+}
+.remove-item {
+  background: #ff5252;
+  border: none;
+  color: #fff;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.remove-item:hover {
+  background: #ff0000;
+}
