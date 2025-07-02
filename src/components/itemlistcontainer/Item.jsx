@@ -7,9 +7,10 @@ function Item({ id, nombre, precio, descripcion }) {
             <h2>{nombre}</h2>
             <p>{descripcion}</p>
             <p>Precio: ${precio}</p>
+            <p style={{fontSize: '0.8rem', color: '#888'}}>ID: {id}</p> {/* Mostrar el ID real */}
         </div>
       </Link>
     )
-  }
-  
-  export default Item
+}
+
+export default Item;

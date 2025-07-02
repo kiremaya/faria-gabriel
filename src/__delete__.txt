@@ -1,0 +1,1 @@
+Eliminando archivos innecesarios: uploadProductos.cjs, uploadProductos.js, uploadProductosSetDoc.cjs

@@ -1,5 +1,5 @@
 const { initializeApp } = require("firebase/app");
-const { getFirestore, collection, addDoc } = require("firebase/firestore");
+const { getFirestore, collection, setDoc, doc } = require("firebase/firestore");
 const { productos } = require("./data/productos");
 
 const firebaseConfig = {
@@ -17,10 +17,11 @@ const db = getFirestore(app);
 async function uploadAll() {
   const productosRef = collection(db, "productos");
   for (const producto of productos) {
-    await addDoc(productosRef, producto);
-    console.log(`Subido: ${producto.nombre}`);
+    // Usar el campo id como ID del documento (debe ser string)
+    await setDoc(doc(productosRef, String(producto.id)), producto);
+    console.log(`Subido: ${producto.nombre} (id: ${producto.id})`);
   }
-  console.log("Todos los productos subidos.");
+  console.log("Todos los productos subidos con setDoc y id personalizado.");
 }
 
 uploadAll();

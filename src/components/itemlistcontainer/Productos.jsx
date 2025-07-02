@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import Itemlist from "../itemlistcontainer/Itemlist.jsx";
 import "../itemlistcontainer/itemlist.css";
 import { collection, getDocs, getFirestore } from "firebase/firestore";
+import ItemList from "./Itemlist.jsx";
+
 function Productos() {
   const [items, setItems] = useState([]);
 
- useEffect(() => {
+  useEffect(() => {
     const db = getFirestore();
     const productosRef = collection(db, "productos");
     getDocs(productosRef).then((snapshot) => {
@@ -14,11 +15,7 @@ function Productos() {
     });
   }, []);
 
-  return (
-    <div className="cards-container">
-      <Itemlist items={items} />
-    </div>
-  );
+  return <ItemList items={items} />;
 }
 
 export default Productos;
